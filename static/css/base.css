@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+.title-text {
+    font-family: 'Montserrat',
+    sans-serif;
+}
+
+.paragraph-text {
+    font-family: 'Roboto Slab',
+    serif;
+}
