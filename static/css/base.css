@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
 
+/* General styles */
+
 * {
     box-sizing: border-box;
 }
@@ -15,7 +17,7 @@ body {
 }
 
 .black-overlay {
-    background:rgba(0, 0, 0, 0.6);
+    background:rgba(0, 0, 0, 0.7);
 }
 
 .title-text {
@@ -32,6 +34,8 @@ body {
     margin: 0 auto;
 }
 
+/* Navbar styles */
+
 .w-33 {
     min-width: 33%;
 }
@@ -40,7 +44,17 @@ body {
     background-color: white;
 }
 
+/* Index page styles */
 
+main {
+    position: relative;
+    min-height: 90vh;
+}
+
+#cta-section {
+    position: absolute;
+    top: 30%;
+}
 
 
 
