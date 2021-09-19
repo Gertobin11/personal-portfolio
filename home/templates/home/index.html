@@ -1,20 +1,48 @@
 {% extends 'base.html' %}
 {% block content %}
-    <main class="container">
+    <main>
         <div class="row" id="cta-section">
-            <div class="col-12">
-                <h1 class=" text-white title-text">
+            <div class="col-12 col-md-6">
+                <h1 id="cta-header" data-aos-delay="300" data-aos="flip-right"
+                    class="text-white title-text ps-2 ps-md-5">
                     Ger Tobin</h1>
-                <h3 class="text-white paragraph-text">
+                <h3 id="cta-sub" data-aos-delay="700" data-aos="flip-right"
+                    class="text-white paragraph-text ps-2 ps-md-5">
                     Web Developer
                 </h3>
-                <p class="text-white paragraph-text w-50">
+                <p id="cta-para" data-aos-delay="1000" data-aos="flip-right" class="text-white paragraph-text ps-2 ps-md-5">
                     I am a Full Stack Web Developer based in Tralee County Kerry, Ireland.
                     I am adept at using HTML5, CSS, JavaScript and Python. I am proficient at using jQuery,
                     Bootstrap, Flask and Django frameworks. I have experience with SQL and NoSQL databases.
                     If you are an employer wishing to  hire me or another web developer looking to collaborate
                     you can contact me <a href="#">here</a>
                 </p>
+            </div>
+            <div class="col-5 offset-1 col-md-2 offset-1">
+                <div class="container">
+                    <div class="center">
+                        <button class="btn">
+                            <svg width="120px" height="40px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span>Portfolio</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5 offset-1 col-md-2 offset-md-0">
+                <div class="container">
+                    <div class="center">
+                        <button class="btn">
+                            <svg width="120px" height="40px" viewBox="0 0 180 60" class="border">
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
+                                <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
+                            </svg>
+                            <span>Contact Me!</span>
+                        </button>
+                    </div>
+                </div>
             </div>
         </div>
     </main>

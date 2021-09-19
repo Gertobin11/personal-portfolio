@@ -6,14 +6,15 @@
     box-sizing: border-box;
 }
 
-body {
+html, body {
     background-image: url('../../media/coding-background.jpg');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
     min-height: 100vh;
-    min-width: 100vw;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 
 .black-overlay {
@@ -32,6 +33,18 @@ body {
 
 .horz-center {
     margin: 0 auto;
+}
+
+.brt-grn {
+    color: #2a9d8f;
+}
+
+.brt-yellow {
+    color: #e9c46a;
+}
+
+.brt-orange {
+    color: #f4a261;
 }
 
 /* Navbar styles */
@@ -56,8 +69,49 @@ main {
     top: 30%;
 }
 
+/* Style for button animation from https://webdeasy.de/en/top-css-buttons-en/ */
 
+.btn {
+    width: 120px;
+    height: 40px;
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #91C9FF;
+    outline: none;
+    transition: 1s ease-in-out;
+}
 
+svg {
+    position: absolute;
+    left: 0;
+    top: 0;
+    fill: none;
+    stroke: #fff;
+    stroke-dasharray: 150 480;
+    stroke-dashoffset: 150;
+    transition: 1s ease-in-out;
+}
+
+.btn:hover {
+    transition: 1s ease-in-out;
+    background: #4F95DA;
+}
+
+.btn:hover svg {
+    stroke-dashoffset: -480;
+}
+
+.btn span {
+    color: white;
+    font-size: 18px;
+    font-weight: 100;
+}
+
+.center {
+    width: 120px;
+    height: 40px;
+    position: absolute;
+}
 
 
 
@@ -67,6 +121,9 @@ main {
 @media only screen and (max-width: 575px) {
     .navbar-brand {
         font-size: 15px;
+    }
+    .paragraph-text {
+        font-size: 13px;
     }
 }
 
