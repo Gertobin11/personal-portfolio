@@ -2,15 +2,12 @@
 {% block content %}
     <main>
         <div class="row" id="cta-section">
-            <div class="col-12 col-md-6">
-                <h1 id="cta-header" data-aos-delay="300" data-aos="flip-right"
-                    class="text-white title-text ps-2 ps-md-5">
-                    Ger Tobin</h1>
-                <h3 id="cta-sub" data-aos-delay="700" data-aos="flip-right"
-                    class="text-white paragraph-text ps-2 ps-md-5">
-                    Web Developer
-                </h3>
-                <p id="cta-para" data-aos-delay="1000" data-aos="flip-right" class="text-white paragraph-text ps-2 ps-md-5">
+            <div class="col-11 col-md-6">
+                <h1 id="cta-header" data-aos-delay="500" data-aos="flip-right"
+                    class="text-white title-text ps-2 ps-md-5"><span class="brt-grn"><i
+                            class="fas fa-laptop-code"></i></span>
+                    Ger Tobin |<span id="cta-sub" class="big-font text-white paragraph-text"> Web Developer</span></h1>
+                <p id="cta-para" data-aos-delay="800" data-aos="flip-right" class="text-white paragraph-text ps-2 ps-md-5 mb-5">
                     I am a Full Stack Web Developer based in Tralee County Kerry, Ireland.
                     I am adept at using HTML5, CSS, JavaScript and Python. I am proficient at using jQuery,
                     Bootstrap, Flask and Django frameworks. I have experience with SQL and NoSQL databases.
@@ -18,32 +15,39 @@
                     you can contact me <a href="#">here</a>
                 </p>
             </div>
-            <div class="col-5 offset-1 col-md-2 offset-1">
+            <div class="col-5 offset-1 col-md-2 offset-1 pe-3">
+                <p class="hand-drawn brt-grn big-font" >Check out my previous projects!</p>
+                <img class="pt-3" data-aos="fade-right" data-aos-delay="400" id="yellow-arrow" src="media/yellow-curved-arrow-11550116461ffkslmxxyg.png"
+                    alt="Picture of a yellow arrow">
                 <div class="container">
                     <div class="center">
                         <button class="btn">
-                            <svg width="120px" height="40px" viewBox="0 0 180 60" class="border">
+                            <svg width="130px" height="40px" viewBox="0 0 180 60" class="border">
                                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                             </svg>
-                            <span>Portfolio</span>
+                            <span class="paragraph-text">Portfolio</span>
                         </button>
                     </div>
                 </div>
             </div>
-            <div class="col-5 offset-1 col-md-2 offset-md-0">
-                <div class="container">
+            <div class="col-5 col-md-2 offset-md-1">
+                <div class="container d-block">
                     <div class="center">
                         <button class="btn">
-                            <svg width="120px" height="40px" viewBox="0 0 180 60" class="border">
+                            <svg width="130px" height="40px" viewBox="0 0 180 60" class="border">
                                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="bg-line" />
                                 <polyline points="179,1 179,59 1,59 1,1 179,1" class="hl-line" />
                             </svg>
-                            <span>Contact Me!</span>
+                            <span class="paragraph-text">Contact Me!</span>
                         </button>
                     </div>
                 </div>
+                <img data-aos="fade-left" data-aos-delay="500" id="scribble-arrow" src="media/scribble-arrow.png">
+                <p class="big-font hand-drawn brt-yellow pe-3">Get in touch with me here!</p>
             </div>
+            <p class="text-white big-font hand-drawn mt-5 text-center">... Or just download my CV <span><a
+                        class="brt-orange" href="#">Here!!!</a></span></p>
         </div>
     </main>
 {% endblock %}

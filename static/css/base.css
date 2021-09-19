@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto+Slab&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
 /* General styles */
 
@@ -11,7 +12,7 @@ html, body {
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.6);
+    box-shadow:inset 0 0 0 2000px rgba(0, 0, 0, 0.7);
     min-height: 100vh;
     max-width: 100%;
     overflow-x: hidden;
@@ -31,6 +32,11 @@ html, body {
     serif;
 }
 
+.hand-drawn {
+    font-family: 'Gochi Hand',
+    cursive;
+}
+
 .horz-center {
     margin: 0 auto;
 }
@@ -47,6 +53,10 @@ html, body {
     color: #f4a261;
 }
 
+.big-font {
+    font-size: 1.7rem;
+}
+
 /* Navbar styles */
 
 .w-33 {
@@ -54,7 +64,11 @@ html, body {
 }
 
 .navbar-toggler {
-    background-color: white;
+    background-color: #e9c46a;
+}
+
+.navbar-nav li a:hover {
+    color: #e9c46a !important;
 }
 
 /* Index page styles */
@@ -72,11 +86,11 @@ main {
 /* Style for button animation from https://webdeasy.de/en/top-css-buttons-en/ */
 
 .btn {
-    width: 120px;
+    width: 130px;
     height: 40px;
     cursor: pointer;
     background: transparent;
-    border: 1px solid #91C9FF;
+    border: 1px solid #f4a261;
     outline: none;
     transition: 1s ease-in-out;
 }
@@ -86,7 +100,7 @@ svg {
     left: 0;
     top: 0;
     fill: none;
-    stroke: #fff;
+    stroke: black;
     stroke-dasharray: 150 480;
     stroke-dashoffset: 150;
     transition: 1s ease-in-out;
@@ -94,7 +108,8 @@ svg {
 
 .btn:hover {
     transition: 1s ease-in-out;
-    background: #4F95DA;
+    background: #f4a261;
+    color: black !important;
 }
 
 .btn:hover svg {
@@ -102,17 +117,35 @@ svg {
 }
 
 .btn span {
-    color: white;
+    color: #ffffff;
     font-size: 18px;
     font-weight: 100;
 }
 
+.btn:hover span {
+    color: black;
+}
+
 .center {
-    width: 120px;
+    width: 130px;
     height: 40px;
     position: absolute;
 }
 
+#yellow-arrow {
+    width: 90px;
+    height: 120px;
+    background: transparent;
+    transform: rotate(180deg);
+}
+
+#scribble-arrow {
+    width: 90px;
+    height: 120px;
+    background: transparent;
+    margin-top: 60px;
+    transform: rotate(180deg);
+}
 
 
 
@@ -124,6 +157,9 @@ svg {
     }
     .paragraph-text {
         font-size: 13px;
+    }
+    #cta-section {
+        top: 15%;
     }
 }
 
