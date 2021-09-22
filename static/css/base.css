@@ -89,8 +89,8 @@ main {
     width: 130px;
     height: 40px;
     cursor: pointer;
-    background: #f4a261;
-    border: 1px solid #f4a261;
+    background: #2a9d8f;
+    border: 1px solid #2a9d8f;
     outline: none;
     transition: 1s ease-in-out;
 }
@@ -99,24 +99,23 @@ main {
 .btn:focus,
 .btn:active {
     transition: 1s ease-in-out;
-    background: #2a9d8f;
+    background: #f4a261;
     color: black !important;
 }
 
 
 #yellow-arrow {
-    width: 90px;
-    height: 120px;
+    width: 120px;
+    height: 100px;
     background: transparent;
     transform: rotate(180deg);
 }
 
 #scribble-arrow {
-    width: 90px;
-    height: 120px;
+    width: 120px;
+    height: 100px;
     background: transparent;
     margin-top: 10px;
-    transform: rotate(180deg);
 }
 
 .hide-element {
