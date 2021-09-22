@@ -7,6 +7,10 @@
     box-sizing: border-box;
 }
 
+.no-list-dec {
+    list-style: none;
+}
+
 html, body {
     background-image: url('../../media/coding-background.jpg');
     background-position: center;
@@ -57,6 +61,10 @@ html, body {
     font-size: 1.7rem;
 }
 
+.cta-gap {
+    height: 20vh;
+}
+
 /* Navbar styles */
 
 .w-33 {
@@ -74,63 +82,27 @@ html, body {
 /* Index page styles */
 
 main {
-    position: relative;
     min-height: 90vh;
 }
-
-#cta-section {
-    position: absolute;
-    top: 30%;
-}
-
-/* Style for button animation from https://webdeasy.de/en/top-css-buttons-en/ */
 
 .btn {
     width: 130px;
     height: 40px;
     cursor: pointer;
-    background: transparent;
+    background: #f4a261;
     border: 1px solid #f4a261;
     outline: none;
     transition: 1s ease-in-out;
 }
 
-svg {
-    position: absolute;
-    left: 0;
-    top: 0;
-    fill: none;
-    stroke: black;
-    stroke-dasharray: 150 480;
-    stroke-dashoffset: 150;
+.btn:hover,
+.btn:focus,
+.btn:active {
     transition: 1s ease-in-out;
-}
-
-.btn:hover {
-    transition: 1s ease-in-out;
-    background: #f4a261;
+    background: #2a9d8f;
     color: black !important;
 }
 
-.btn:hover svg {
-    stroke-dashoffset: -480;
-}
-
-.btn span {
-    color: #ffffff;
-    font-size: 18px;
-    font-weight: 100;
-}
-
-.btn:hover span {
-    color: black;
-}
-
-.center {
-    width: 130px;
-    height: 40px;
-    position: absolute;
-}
 
 #yellow-arrow {
     width: 90px;
@@ -143,12 +115,38 @@ svg {
     width: 90px;
     height: 120px;
     background: transparent;
-    margin-top: 60px;
+    margin-top: 10px;
     transform: rotate(180deg);
 }
 
+.hide-element {
+    display: none;
+}
+
+/* Code snippet from https://tobiasahlin.com/blog/layered-smooth-box-shadows/ */
+.shadow-6 {
+    box-shadow: 0 1px 1px rgba(100, 100, 100, 0.3),
+        0 2px 2px rgba(100, 100, 100, 0.3),
+        0 4px 4px rgba(100, 100, 100, 0.3),
+        0 8px 8px rgba(100, 100, 100, 0.3),
+        0 16px 16px rgba(100, 100, 100, 0.3),
+        0 32px 32px rgba(100, 100, 100, 0.3);
+}
+
+/* Footer stylings */
+
+footer {
+    background-color: #8a8c84;
+}
+
+#footer-nav li a:hover {
+    color: #e9c46a !important;
+}
 
 
+.vertical-rule {
+    border-right: 1px solid white;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 575px) {
