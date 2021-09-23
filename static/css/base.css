@@ -65,6 +65,10 @@ html, body {
     height: 20vh;
 }
 
+.whitesmoke {
+    color: whitesmoke;
+}
+
 /* Navbar styles */
 
 .w-33 {
@@ -132,13 +136,65 @@ main {
         0 32px 32px rgba(100, 100, 100, 0.3);
 }
 
+/* Back to the top button from https://codepen.io/matthewcain/pen/ZepbeR */
+
+#button {
+    display: inline-block;
+    background-color: #e9c46a;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border-radius: 4px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    transition: background-color .3s,
+        opacity .5s, visibility .5s;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1000;
+    text-decoration: none;
+}
+
+#button::after {
+    content: "\f077";
+    font-family: FontAwesome;
+    font-weight: normal;
+    font-style: normal;
+    font-size: 2em;
+    line-height: 50px;
+    color: #fff;
+}
+
+#button:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+#button:active {
+    background-color: #555;
+}
+
+#button.show {
+    opacity: 1;
+    visibility: visible;
+}
+
 /* Footer stylings */
 
 footer {
-    background-color: #8a8c84;
+    background-color: black;
 }
 
-#footer-nav li a:hover {
+footer a:hover,
+footer .btn:focus,
+footer .btn:active {
+    color: #e9c46a !important;
+}
+
+#footer-nav li a:hover,
+#footer-nav li a:focus,
+#footer-nav li a:active {
     color: #e9c46a !important;
 }
 
