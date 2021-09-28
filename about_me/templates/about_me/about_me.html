@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% block content %}
+<section id="main-pic">
+    <h1 class="mt-4 mb-4 text-center whitesmoke title-text"><i class="far fa-address-card brt-grn"></i> About Me</h1>
+    <div class="row">
+        <div class="col-md-3 col-6 text-end pe-0">
+            <img  id="ger-pic" src="/media/myself.png" alt="picture of Ger Tobin">
+        </div>
+        <div class="col-md-3 col-6 text-start ps-0">
+            <img id="thinking-bubble" src="/media/thinking-code-white.png" alt="Thinking bubble with programming language logos inside">
+        </div>
+        <div class="col-10 offset-1 col-md-4">
+            <p id="about-me-p" class="paragraph-text text-center whitesmoke">
+                <i class="brt-grn fas fa-quote-left"></i>
+                I am a full stack web developer who completed the Code Institutes Diploma In Software Development.
+                As a developer I love the process of turning ideas into the basis for a project and then the challenge
+                of putting these
+                into functioning code. I am comfortable in both frontend and backend development and I strive to keep on
+                improving my skills as a developer
+                through learning the React framework (a course I am currently undetaking) and solidifying my skills in
+                Python through taking Openedg certification.
+                <i class="fas fa-quote-right brt-grn"></i>
+            </p>
+        </div>
+    </div>
+</section>
+<hr class="whitesmoke mt-4 mb-4">
+<section id="skills">
+    <div class="mt-4 row">
+        <div class="col-12 col-md-6">
+            <h3 class="title-text text-center whitesmoke"><i class="fas fa-code brt-grn"></i> Programming Languages</h3>
+        </div>
+        <div class="col-12 col-md-6">
+            <h3 class="title-text text-center whitesmoke"><i class="fas fa-terminal brt-grn"></i> Libraries & Frameworks</h3>
+        </div>
+    </div>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+</script>
+
+<script>
+    $(document).ready(function(){
+        // Function to delay the image loading and fade it in after
+        $("#thinking-bubble").hide();
+        $("#thinking-bubble").delay(700).fadeIn(1000);
+    })
+
+        
+        
+    
+</script>
+
+{% endblock %}

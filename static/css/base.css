@@ -203,6 +203,38 @@ footer .btn:active {
     border-right: 1px solid white;
 }
 
+/* About Me stylings */
+
+#ger-pic {
+    max-height: 40vh;
+    margin-top: 10vh;
+    max-width: 90%;
+}
+
+#thinking-bubble {
+    max-height: 40vh;
+    margin-bottom: 10vh;
+    max-width: 90%;
+}
+
+#about-me-p {
+    text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.fa-quote-left:before {
+    font-size: 1.8rem;
+}
+
+.fa-quote-right:before {
+    font-size: 1.8rem;
+}
+
+
 /* Media Queries */
 @media only screen and (max-width: 575px) {
     .navbar-brand {

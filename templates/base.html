@@ -47,7 +47,7 @@
                         <a class="text-white nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link" href="#">Skills</a>
+                        <a class="text-white nav-link" href="{% url 'about_me' %}">About Me</a>
                     </li>
                     <li class="nav-item">
                         <a class="text-white nav-link" href="#">Portfolio</a>
@@ -111,7 +111,8 @@
                         <ul id="footer-nav" class="text-center bg-transparent">
                             <li class="no-list-dec"><a class="text-decoration-none whitesmoke small"
                                     href="{% url 'home' %}">Home</a></li>
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" href="#">Skills</a></li>
+                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" 
+                                    href="{% url 'about_me' %}">About Me</a></li>
                             <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" href="#">Portfolio</a></li>
                             <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" href="#">Contact</a></li>
                         </ul>
@@ -130,6 +131,5 @@
         let year = new Date()
         document.getElementById("footer-year").innerHTML = year.getFullYear();
     </script>
-
 </body>
 </html>
