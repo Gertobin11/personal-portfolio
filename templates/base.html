@@ -76,7 +76,8 @@
 
     {% block content %}
     {% endblock %}
-
+    <!-- Back to top button -->
+    <a id="button"></a>
     <footer>
         <div class="pt-5 container">
             <div class="row">
@@ -130,6 +131,25 @@
         // Function to keep the date of the website up to date
         let year = new Date()
         document.getElementById("footer-year").innerHTML = year.getFullYear();
+    </script>
+    <script>
+        // Function to return the user to the top of the screen
+        var btn = $('#button');
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                btn.addClass('show');
+            } else {
+                btn.removeClass('show');
+            }
+        });
+
+        btn.on('click', function (e) {
+            e.preventDefault();
+            $('html, body').animate({
+                scrollTop: 0
+            }, '300');
+        });
     </script>
 </body>
 </html>
