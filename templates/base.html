@@ -136,37 +136,38 @@
     <script>
         // Function to return the user to the top of the screen
         var btn = $('#button');
-
+        // Hides the button if the user is near the top of the screen and shows it down the page
         $(window).scroll(function () {
             if ($(window).scrollTop() > 300) {
                 btn.addClass('show');
+            // Shows the button when the user scrolls up from the bottom
             } else {
                 btn.removeClass('show');
             }
         });
-
+        // By clicking the button it will scroll the user to the top of the page
         btn.on('click', function (e) {
             e.preventDefault();
             $('html, body').animate({
                 scrollTop: 0
             }, '300');
         });
-
-
         // Function to bring the user down to next content block
         var btntop = $('#button-down');
         btntop.addClass('show')
+        // Hides the button if the user has reached near the end of the page
         $(window).scroll(function () {
             if ($(window).scrollTop() >= $(
             '.scroll-stop').offset().top + $('.scroll-stop').
             outerHeight() - window.innerHeight){
                 btntop.removeClass('show');
             }
+            // Shows the button again if the user has scrolled up
             else {
                 btntop.addClass('show');
             }
         });
-        
+        // By clicking the user will be brought down by the page
         btntop.on('click', function (e) {
             e.preventDefault();
             window.scrollBy(0, innerHeight);
