@@ -3,10 +3,10 @@
 
 <section id="skills">
     <h1 class="my-4 text-center whitesmoke title-text"><i class="far fa-address-card brt-grn"></i> About Me</h1>
-    <div class="px-4 mt-4 row">
+    <div class="px-4 my-4 mt-4 row">
         <div class="px-4 col-12 col-md-6">
             <h3 class="my-4 title-text text-center whitesmoke"><i class="fas fa-code brt-grn"></i> Programming Languages</h3>
-            <p class="paragraph-text mt-3 whitesmoke">HTML5</p>
+            <p class="mt-4 pt-4 paragraph-text mt-3 whitesmoke">HTML5</p>
             <div class="animation-container">
                 <span class="html whitesmoke text-end">85%</span>
             </div>
@@ -24,12 +24,74 @@
             </div>
         </div>
         <div class="col-12 col-md-6">
-            <h3 class="mx-4 my-4 title-text text-center whitesmoke"><i class="fas fa-terminal brt-grn"></i> Libraries & Frameworks</h3>
+            <h3 class="my-4 title-text text-center whitesmoke"><i class="fas fa-terminal brt-grn"></i> Libraries & Frameworks</h3>
+            <div class="row">
+                <div class="col-6">
+                    <div class="circular center-item">
+                        <div class="inner"></div>
+                        <div class="number"></div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress"></div>
+                            </div>
+                            <div class="bar right">
+                                <div class="progress"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="py-2 mb-0 whitesmoke text-center paragraph-text">Django</p>
+                </div>
+                <div class="col-6">
+                    <div class="circular center-item">
+                        <div class="inner"></div>
+                        <div class="number-1">65</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress-1"></div>
+                            </div>
+                            <div class="bar right-1">
+                                <div class="progress-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="py-2 mb-0 whitesmoke text-center paragraph-text">jQuery</p>
+                </div>
+                <div class="col-6">
+                    <div class="circular center-item">
+                        <div class="inner"></div>
+                        <div class="number-2">60</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress-2"></div>
+                            </div>
+                            <div class="bar right-2">
+                                <div class="progress-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="py-2 whitesmoke text-center paragraph-text">Flask</p>
+                </div>
+                <div class="col-6">
+                    <div class="circular center-item">
+                        <div class="inner"></div>
+                        <div class="number-3">85</div>
+                        <div class="circle">
+                            <div class="bar left">
+                                <div class="progress-3"></div>
+                            </div>
+                            <div class="bar right-3">
+                                <div class="progress-3"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="py-2 whitesmoke text-center paragraph-text">Bootstrap</p>
+                </div>
+            </div>
         </div>
     </div>
 </section>
 <br><br>
-<section id="main-pic">
+<section class="scroll-stop" id="main-pic">
     <div class="row">
         <div class="col-md-3 col-6 text-end pe-0">
             <img id="ger-pic" src="/media/myself.png" alt="picture of Ger Tobin">
@@ -59,11 +121,37 @@
 </script>
 
 <script>
+
+    django = $(".number")
+    jquery = $(".number-1")
+    flask = $(".number-2")
+    bootstrap = $(".number-3")
+
+
+    // Function to apply an increasing percentage to the number inside the progress bar
+    function numberCount(number, percentage) {
+        let framework = number
+        let counter = 0;
+        setInterval(() => {
+            if(counter == percentage ){
+                clearInterval();
+            }
+            else{
+                counter+=1;
+                framework.html(counter + "%");
+            }
+        }, 40);
+    }
+
     $(document).ready(function(){
         // Function to delay the image loading and fade it in after
         $("#thinking-bubble").hide();
         $("#thinking-bubble").delay(700).fadeIn(1000);
-    })
+        numberCount(django, 75)
+        numberCount(jquery, 65)
+        numberCount(flask, 60)
+        numberCount(bootstrap, 85)
+        })
 
         
         

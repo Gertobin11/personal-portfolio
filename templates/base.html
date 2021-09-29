@@ -77,6 +77,7 @@
     {% block content %}
     {% endblock %}
     <!-- Back to top button -->
+    <a id="button-down"></a>
     <a id="button"></a>
     <footer>
         <div class="pt-5 container">
@@ -150,6 +151,27 @@
                 scrollTop: 0
             }, '300');
         });
+
+
+        // Function to bring the user down to next content block
+        var btntop = $('#button-down');
+        btntop.addClass('show')
+        $(window).scroll(function () {
+            if ($(window).scrollTop() >= $(
+            '.scroll-stop').offset().top + $('.scroll-stop').
+            outerHeight() - window.innerHeight){
+                btntop.removeClass('show');
+            }
+            else {
+                btntop.addClass('show');
+            }
+        });
+        
+        btntop.on('click', function (e) {
+            e.preventDefault();
+            window.scrollBy(0, innerHeight);
+        });
+       
     </script>
 </body>
 </html>
