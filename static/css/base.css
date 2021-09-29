@@ -234,6 +234,102 @@ footer .btn:active {
     font-size: 1.8rem;
 }
 
+/* Code inspired from a freecodecamp tutorial */
+
+.animation-container {
+    height: 16px;
+    position: relative;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    line-height: 16px;
+    border-radius: 30px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25), 0 1px rgba(255, 255, 255, 0.08);
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.animation-container .html {
+    display: inline-block;
+    position: relative;
+    background: #2a9d8f;
+    background-size: 100%;
+    width: 85%;
+    height: 16px;
+    border-radius: 12px 0 0 12px;
+    animation: html-anim 4s 1 ease-out;
+}
+
+@keyframes html-anim {
+    0% {
+        width: 1%
+    }
+    100% {
+        width: 85%
+    }
+}
+
+.animation-container .css {
+    display: inline-block;
+    position: relative;
+    background: #2a9d8f;
+    background-size: 100%;
+    width: 70%;
+    height: 16px;
+    border-radius: 12px 0 0 12px;
+    animation: css-anim 4s 1 ease-out;
+}
+
+@keyframes css-anim {
+    0% {
+        width: 1%
+    }
+
+    100% {
+        width: 70%
+    }
+}
+
+.animation-container .js {
+    display: inline-block;
+    position: relative;
+    background: #2a9d8f;
+    background-size: 100%;
+    width: 60%;
+    height: 16px;
+    border-radius: 12px 0 0 12px;
+    animation: js-anim 4s 1 ease-out;
+}
+
+@keyframes js-anim {
+    0% {
+        width: 1%
+    }
+
+    100% {
+        width: 60%
+    }
+}
+
+.animation-container .python {
+    display: inline-block;
+    position: relative;
+    background: #2a9d8f;
+    background-size: 100%;
+    width: 80%;
+    height: 16px;
+    border-radius: 12px 0 0 12px;
+    animation: python-anim 4s 1 ease-out;
+}
+
+@keyframes python-anim {
+    0% {
+        width: 1%
+    }
+
+    100% {
+        width: 80%
+    }
+}
 
 /* Media Queries */
 @media only screen and (max-width: 575px) {

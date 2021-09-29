@@ -1,13 +1,42 @@
 {% extends 'base.html' %}
 {% block content %}
+
+<section id="skills">
+    <h1 class="my-4 text-center whitesmoke title-text"><i class="far fa-address-card brt-grn"></i> About Me</h1>
+    <div class="px-4 mt-4 row">
+        <div class="px-4 col-12 col-md-6">
+            <h3 class="my-4 title-text text-center whitesmoke"><i class="fas fa-code brt-grn"></i> Programming Languages</h3>
+            <p class="paragraph-text mt-3 whitesmoke">HTML5</p>
+            <div class="animation-container">
+                <span class="html whitesmoke text-end">85%</span>
+            </div>
+            <p class="paragraph-text mt-3 whitesmoke">CSS3</p>
+            <div class="animation-container">
+                <span class="css whitesmoke text-end">70%</span>
+            </div>
+            <p class="paragraph-text mt-3 whitesmoke">JavaScript</p>
+            <div class="animation-container">
+                <span class="js whitesmoke text-end">60%</span>
+            </div>
+            <p class="paragraph-text mt-3 whitesmoke">Python</p>
+            <div class="animation-container">
+                <span class="python whitesmoke text-end">80%</span>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <h3 class="mx-4 my-4 title-text text-center whitesmoke"><i class="fas fa-terminal brt-grn"></i> Libraries & Frameworks</h3>
+        </div>
+    </div>
+</section>
+<br><br>
 <section id="main-pic">
-    <h1 class="mt-4 mb-4 text-center whitesmoke title-text"><i class="far fa-address-card brt-grn"></i> About Me</h1>
     <div class="row">
         <div class="col-md-3 col-6 text-end pe-0">
-            <img  id="ger-pic" src="/media/myself.png" alt="picture of Ger Tobin">
+            <img id="ger-pic" src="/media/myself.png" alt="picture of Ger Tobin">
         </div>
         <div class="col-md-3 col-6 text-start ps-0">
-            <img id="thinking-bubble" src="/media/thinking-code-white.png" alt="Thinking bubble with programming language logos inside">
+            <img id="thinking-bubble" src="/media/thinking-code-white.png"
+                alt="Thinking bubble with programming language logos inside">
         </div>
         <div class="col-10 offset-1 col-md-4">
             <p id="about-me-p" class="paragraph-text text-center whitesmoke">
@@ -23,18 +52,6 @@
             </p>
         </div>
     </div>
-</section>
-<hr class="whitesmoke mt-4 mb-4">
-<section id="skills">
-    <div class="mt-4 row">
-        <div class="col-12 col-md-6">
-            <h3 class="title-text text-center whitesmoke"><i class="fas fa-code brt-grn"></i> Programming Languages</h3>
-        </div>
-        <div class="col-12 col-md-6">
-            <h3 class="title-text text-center whitesmoke"><i class="fas fa-terminal brt-grn"></i> Libraries & Frameworks</h3>
-        </div>
-    </div>
-
 </section>
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
