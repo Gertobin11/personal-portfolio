@@ -22,6 +22,6 @@ class ContactForm1(forms.ModelForm):
         }
         for field in self.fields:
             placeholder = placeholders[field]
-            self.fields['full_name'].widget.attrs['autofocus'] = True
+            self.fields['fullname'].widget.attrs['autofocus'] = True
             self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
