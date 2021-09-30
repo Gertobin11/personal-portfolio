@@ -53,7 +53,7 @@
                         <a class="text-white nav-link" href="#">Portfolio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link" href="#">Contact</a>
+                        <a class="text-white nav-link" href="{% url 'contact' %}">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -116,7 +116,8 @@
                             <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" 
                                     href="{% url 'about_me' %}">About Me</a></li>
                             <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" href="#">Portfolio</a></li>
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" href="#">Contact</a></li>
+                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small"
+                                    href="{% url 'contact' %}">Contact</a></li>
                         </ul>
                     </nav>
                 </div>
