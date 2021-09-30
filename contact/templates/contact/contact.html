@@ -1,4 +1,20 @@
 {% extends 'base.html' %}
 {% block content %}
-    <h1 class="whitesmoke title-text text-center">Contact Me</h1>
+    <main id="my-4 contact-section">
+        <br>
+        <h1 class=" my-4 whitesmoke text-center title-text"><i class="brt-grn fab fa-wpforms"></i> Contact Form</h1>
+        <form class="whitesmoke paragraph-text" action="{% url 'contact' %}" method="POST" id="contact-form">
+            <label for="fullname">Fullname :</label>
+            <input type="text" name="fullname" id="fullname">
+            <label for="email">Email :</label>
+            <input type="email" name="email" id="email">
+            <label for="tel">Phone Number :</label>
+            <input type="tel" name="tel" id="tel">
+            <label for="comments">Please leave reason for contacting me or any comments :</label>
+            <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            <button type="submit"></button>
+            <button type="reset"></button>
+        </form>
+
+    </main>
 {% endblock %}
