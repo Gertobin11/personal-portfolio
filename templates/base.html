@@ -31,7 +31,7 @@
     <title>Ger Tobin, Web Developer{% block extra_title %}{% endblock %}</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-transparent">
+    <header class="navbar navbar-expand-lg navbar-light bg-transparent">
         <div class="container-fluid">
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
@@ -41,22 +41,24 @@
                         class="fas fa-laptop-code"></i></span>  Ger Tobin |<span
                                     class="paragraph-text"><em><small> Web
                 Developer</small></em></span></a>
-            <div class="me-auto ms-auto justify-content-lg-center collapse navbar-collapse" id="navbarTogglerDemo03">
-                <ul id="nav-bar-links" class="navbar-nav mb-lg-0">
-                    <li class="nav-item">
-                        <a class="text-white nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link" href="{% url 'about_me' %}">About Me</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link" href="#">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="text-white nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
-                </ul>
-            </div>
+            <nav>
+                <div class="me-auto ms-auto justify-content-lg-center collapse navbar-collapse" id="navbarTogglerDemo03">
+                    <ul id="nav-bar-links" class="navbar-nav mb-lg-0">
+                        <li class="nav-item">
+                            <a class="text-white nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="{% url 'about_me' %}">About Me</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="#">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="text-white nav-link" href="{% url 'contact' %}">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mb-lg-0 ms-auto">
                     <li class="nav-item">
@@ -72,7 +74,25 @@
                 </ul>
             </div>
         </div>
-    </nav>
+    </header>
+    {% if messages %}
+    <!-- message.level is from bootstrap.docs info learned through Boutique Ado from Code Institute-->
+    <div class="message-container">
+        {% for message in messages %}
+            {% with message.level as level %}
+                {% if level == 40 %}
+                    {% include 'includes/toasts/toast_error.html' %}
+                {% elif level == 30 %}
+                    {% include 'includes/toasts/toast_warning.html' %}
+                {% elif level == 25 %}
+                    {% include 'includes/toasts/toast_success.html' %}
+                {% else %}
+                    {% include 'includes/toasts/toast_info.html' %}
+                {% endif %}
+            {% endwith %}
+        {% endfor %}
+    </div>
+    {% endif %}
 
     {% block content %}
     {% endblock %}
@@ -174,6 +194,13 @@
             window.scrollBy(0, innerHeight);
         });
        
+    </script>
+    <script>
+        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+        var toastList = toastElList.map(function (toastEl) {
+            // Creates an array of toasts , obtained through bootstrap docs
+            return new bootstrap.Toast(toastEl).show()
+        });
     </script>
 </body>
 </html>

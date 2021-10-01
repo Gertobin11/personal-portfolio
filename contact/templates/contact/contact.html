@@ -3,13 +3,14 @@
 {% block content %}
     <main id="my-4 contact-section">
         <br>
-        <h1 class=" my-4 whitesmoke text-center title-text"><i class="brt-grn fab fa-wpforms"></i> Contact Me!</h1>
+        <h1 class=" my-4 whitesmoke text-center title-text"><i class="brt-grn far fa-envelope"></i> Contact Me!</h1>
         <div class="row">
             <div class="col-10 offset-1 col-md-8 offset-md-2">
                 <form class="whitesmoke paragraph-text" action="{% url 'contact' %}" method="POST" id="contact-form">
                     {% csrf_token %}
                     <fieldset>
-                        <legend class="whitesmoke title-text">Contact Form</legend>
+                        <legend class="whitesmoke title-text"><i class="brt-grn fab fa-wpforms"></i> Contact Form
+                        </legend>
                         {% for field in contact_form1 %}
                             {{ field | as_crispy_field }}
                         {% endfor %}
