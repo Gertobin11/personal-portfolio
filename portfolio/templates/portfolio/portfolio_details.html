@@ -1,1 +1,71 @@
-{{ project.project_name }}
+{% extends 'base.html' %}
+{% block content %}
+    <main class="scroll-stop">
+        <div class="container-fluid">
+            <br>
+            <h1 class="whitesmoke text-center title-text">{{ project.project_name }}</h1>
+            <br>
+            <div class="row">
+                <div class="px-0 col-12 img-header">
+                    <img src="/media/{{ project.project_image }}" alt="">
+                    <div class="px-4 py-4 container-project whitesmoke paragraph-text black-overlay">
+                        <h2 class="text-center title-text whitesmoke">{{ project.project_name }}</h2>
+                        <div class="row">
+                            <div class="col-2">
+                                <p>
+                                    Project Description:
+                                </p>
+                            </div>
+                            <div class="col-9 offset-1">
+                                <p>
+                                    {{ project.project_description }}
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <p>
+                                    Technologies Used:
+                                </p>
+                            </div>
+                            <div class="col-9 offset-1">
+                                <p>
+                                    {{ project.technologies_used }}
+                                </p>
+                            </div>
+                            <div class="col-2">
+                                <p>
+                                    Github Repo:
+                                </p>
+                            </div>
+                            <div class="col-9 offset-1">
+                                <a id="githublink" class="text-decoration-none brt-yellow" href="{{ project.git_hub_repo }}"
+                                    target="_blank">
+                                    {{ project.git_hub_repo }}
+                                </a>
+                            </div>
+                            <div class="col-2">
+                                <p>
+                                    Live Site:
+                                </p>
+                            </div>
+                            <div class="col-9 offset-1">
+                                <a id="livesite" class="text-decoration-none brt-grn" href="{{ project.live_site }}" target="_blank">
+                                    {{ project.live_site }}
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <div class="mx-2 my-4 text-center button-wrapper">
+                <a id="return-port" class="btn text-white" href="{% url 'portfolio_page' %}">
+                    <i class="fas fa-chevron-left"></i> Portfolio
+                </a>
+                <a id="contact-me-btn" class="mx-2 btn bg-brt-yellow" href="{% url 'contact' %}">
+                    Contact Me
+                </a>
+            </div>
+            <br>
+        </div>
+    </main>
+{% endblock %}

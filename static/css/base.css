@@ -69,6 +69,10 @@ html, body {
     color: whitesmoke;
 }
 
+.bg-brt-yellow {
+    background-color: #e9c46a !important;
+}
+
 .center-item {
     margin: 0 auto;
 }
@@ -666,6 +670,51 @@ footer .btn:active {
 
 .card-text {
     font-size: 13px;
+}
+
+.img-header {
+    position: relative;
+    min-height: 90vh;
+    overflow: hidden;
+}
+
+.img-header img {
+    width: 100%;
+    position: absolute;
+}
+
+.img-header .container-project {
+    background-color: rgba(0, 0, 0, 0.85);
+    width: 100%;
+    padding: 20px 0px 20px;
+    position: absolute;
+    bottom: 0px;
+}
+
+#livesite:hover,
+#livesite:focus,
+#livesite:active {
+    color: #f4a261
+}
+
+#githublink:hover,
+#githublink:focus,
+#githublink:active {
+    color: #f4a261
+}
+
+#contact-me-btn:hover,
+#contact-me-btn:focus,
+#contact-me-btn:active {
+    background-color: whitesmoke !important;
+    color: #2a9d8f !important;
+}
+
+#return-port:hover,
+#return-port:focus,
+#return-port:active {
+    background-color: black !important;
+    color: #f4a261 !important;
 }
 
 /* Media Queries */
