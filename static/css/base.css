@@ -653,6 +653,7 @@ footer .btn:active {
 
 .card {
     overflow: hidden;
+    border-radius: 10%;
 }
 
 .card img {
