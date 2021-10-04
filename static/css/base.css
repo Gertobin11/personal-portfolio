@@ -76,6 +76,10 @@ html, body {
 /* Navbar styles */
 
 .w-33 {
+    max-width: 33%;
+}
+
+.w-min-33 {
     min-width: 33%;
 }
 
@@ -645,6 +649,23 @@ footer .btn:active {
     border-bottom-color: #343a40 !important;
 }
 
+/* Portfolio page stylings */ 
+
+.card {
+    overflow: hidden;
+}
+
+.card img {
+    transition: transform 1s ease;
+}
+
+.card:hover img {
+    transform: scale(1.1);
+}
+
+.card-text {
+    font-size: 13px;
+}
 
 /* Media Queries */
 @media only screen and (max-width: 575px) {

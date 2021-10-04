@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block content %}
 
-<section id="skills">
+<section class="scroll-stop" id="skills">
     <h1 class="my-4 text-center whitesmoke title-text"><i class="far fa-address-card brt-grn"></i> About Me</h1>
     <div class="px-4 my-4 mt-4 row">
         <div class="px-4 col-12 col-md-6">
@@ -116,46 +116,43 @@
     </div>
 </section>
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"
-    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
-</script>
+{% endblock %}
 
-<script>
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
 
-    django = $(".number")
-    jquery = $(".number-1")
-    flask = $(".number-2")
-    bootstrap = $(".number-3")
+    <script>
+        django = $(".number")
+        jquery = $(".number-1")
+        flask = $(".number-2")
+        bootstrap = $(".number-3")
 
 
-    // Function to apply an increasing percentage to the number inside the progress bar
-    function numberCount(number, percentage) {
-        let framework = number
-        let counter = 0;
-        setInterval(() => {
-            if(counter == percentage ){
-                clearInterval();
-            }
-            else{
-                counter+=1;
-                framework.html(counter + "%");
-            }
-        }, 40);
-    }
+        // Function to apply an increasing percentage to the number inside the progress bar
+        function numberCount(number, percentage) {
+            let framework = number
+            let counter = 0;
+            setInterval(() => {
+                if (counter == percentage) {
+                    clearInterval();
+                } else {
+                    counter += 1;
+                    framework.html(counter + "%");
+                }
+            }, 40);
+        }
 
-    $(document).ready(function(){
-        // Function to delay the image loading and fade it in after
-        $("#thinking-bubble").hide();
-        $("#thinking-bubble").delay(700).fadeIn(1000);
-        numberCount(django, 75)
-        numberCount(jquery, 65)
-        numberCount(flask, 60)
-        numberCount(bootstrap, 85)
+        $(document).ready(function () {
+            // Function to delay the image loading and fade it in after
+            $("#thinking-bubble").hide();
+            $("#thinking-bubble").delay(700).fadeIn(1000);
+            numberCount(django, 75)
+            numberCount(jquery, 65)
+            numberCount(flask, 60)
+            numberCount(bootstrap, 85)
         })
-
-        
-        
-    
-</script>
-
+    </script>
 {% endblock %}

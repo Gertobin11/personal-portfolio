@@ -1,6 +1,32 @@
 {% extends 'base.html' %}
 {% block content %}
-    {% for project in projects %}
-        {{ project.project_name }}
-    {% endfor %}
+    <div class="container">
+        <h1 class="my-4 text-center whitesmoke title-text">My Projects</h1>
+        <br>
+        <div class="row" id="project-row">
+            {% for project in projects %}
+                <div data-aos="flip-down" data-aos-delay="100" class="scroll-stop my-2 px-4 col-12 col-md-6">
+                    <a href="#" class="text-decoration-none">
+                        <div class="shadow-6 card mb-3 bg-transparent">
+                            <img src="/media/{{ project.project_image }}" class="card-img-top" alt="...">
+                            <div class="card-body black-overlay">
+                                <h5 class="title-text whitesmoke card-title">{{ project.project_name }}</h5>
+                                <p class="card-text paragraph-text whitesmoke">{{ project.project_intro }}</p>
+                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            {% endfor %}
+        </div>
+        <br><br><br>
+        <br><br><br>
+    </div>
+{% endblock %}
+
+{% block postloadjs %}
+    {{ block.super }}
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+    </script>
 {% endblock %}

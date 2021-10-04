@@ -25,6 +25,9 @@
         </script>
         <!-- Font awesome -->
         <script src="https://kit.fontawesome.com/f0ca44b893.js" crossorigin="anonymous"></script>
+        <!-- JQuery download for the return to top button -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     {% endblock %}
 
     <title>Ger Tobin, Web Developer{% block extra_title %}{% endblock %}</title>
@@ -36,12 +39,12 @@
                 aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon text-white"></span>
             </button>
-            <a class="navbar-brand title-text text-white w-33" href="{% url 'home' %}"><span class="brt-grn"><i
+            <a class="navbar-brand title-text text-white w-min-33" href="{% url 'home' %}"><span class="brt-grn"><i
                         class="fas fa-laptop-code"></i></span>  Ger Tobin |<span
                                     class="paragraph-text"><em><small> Web
                 Developer</small></em></span></a>
-            <nav>
-                <div class="me-auto ms-auto justify-content-lg-center collapse navbar-collapse" id="navbarTogglerDemo03">
+            <nav class="w-min-33">
+                <div class="me-auto ms-auto justify-content-md-center collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul id="nav-bar-links" class="navbar-nav mb-lg-0">
                         <li class="nav-item">
                             <a class="text-white nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
@@ -58,7 +61,7 @@
                     </ul>
                 </div>
             </nav>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <div class="w-min-33 collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mb-lg-0 ms-auto">
                     <li class="nav-item">
                         <a class="text-white nav-link" aria-current="page" href="#"><i
@@ -143,62 +146,65 @@
             </div>
         </div>
     </footer>
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
-    <script>
-        // Function to keep the date of the website up to date
-        let year = new Date()
-        document.getElementById("footer-year").innerHTML = year.getFullYear();
-    </script>
-    <script>
-        // Function to return the user to the top of the screen
-        var btn = $('#button');
-        // Hides the button if the user is near the top of the screen and shows it down the page
-        $(window).scroll(function () {
-            if ($(window).scrollTop() > 300) {
-                btn.addClass('show');
-            // Shows the button when the user scrolls up from the bottom
-            } else {
-                btn.removeClass('show');
-            }
-        });
-        // By clicking the button it will scroll the user to the top of the page
-        btn.on('click', function (e) {
-            e.preventDefault();
-            $('html, body').animate({
-                scrollTop: 0
-            }, '300');
-        });
-        // Function to bring the user down to next content block
-        var btntop = $('#button-down');
-        btntop.addClass('show')
-        // Hides the button if the user has reached near the end of the page
-        $(window).scroll(function () {
+    {% block postloadjs %}
+        {{ block.super }}
+        <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+        <script>
+            AOS.init();
+        </script>
+        <script>
+            // Function to keep the date of the website up to date
+            let year = new Date()
+            document.getElementById("footer-year").innerHTML = year.getFullYear();
+        </script>
+        <script>
+            // Function to return the user to the top of the screen
+            var btn = $('#button');
+            // Hides the button if the user is near the top of the screen and shows it down the page
+            $(window).scroll(function () {
+                if ($(window).scrollTop() > 300) {
+                    btn.addClass('show');
+                // Shows the button when the user scrolls up from the bottom
+                } else {
+                    btn.removeClass('show');
+                }
+            });
+            // By clicking the button it will scroll the user to the top of the page
+            btn.on('click', function (e) {
+                e.preventDefault();
+                $('html, body').animate({
+                    scrollTop: 0
+                }, '300');
+            });
+            // Function to bring the user down to next content block
+            var btntop = $('#button-down');
+            btntop.addClass('show')
+            // Hides the button if the user has reached near the end of the page
+            $(window).scroll(function () {
             if ($(window).scrollTop() >= $(
-            '.scroll-stop').offset().top + $('.scroll-stop').
-            outerHeight() - window.innerHeight){
-                btntop.removeClass('show');
-            }
-            // Shows the button again if the user has scrolled up
-            else {
-                btntop.addClass('show');
-            }
-        });
-        // By clicking the user will be brought down by the page
-        btntop.on('click', function (e) {
-            e.preventDefault();
-            window.scrollBy(0, innerHeight);
-        });
-       
-    </script>
-    <script>
-        var toastElList = [].slice.call(document.querySelectorAll('.toast'))
-        var toastList = toastElList.map(function (toastEl) {
-            // Creates an array of toasts , obtained through bootstrap docs
-            return new bootstrap.Toast(toastEl).show()
-        });
-    </script>
+                '.scroll-stop').offset().top + $('.scroll-stop').
+                outerHeight() - window.innerHeight){
+                    btntop.removeClass('show');
+                }
+                // Shows the button again if the user has scrolled up
+                else {
+                    btntop.addClass('show');
+                }
+            });
+            // By clicking the user will be brought down by the page
+            btntop.on('click', function (e) {
+                e.preventDefault();
+                window.scrollBy(0, innerHeight);
+            });
+        
+        </script>
+        <script>
+            var toastElList = [].slice.call(document.querySelectorAll('.toast'))
+            var toastList = toastElList.map(function (toastEl) {
+                // Creates an array of toasts , obtained through bootstrap docs
+                return new bootstrap.Toast(toastEl).show()
+            });
+        </script>
+    {% endblock %}
 </body>
 </html>

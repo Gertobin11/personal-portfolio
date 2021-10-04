@@ -47,10 +47,10 @@
         </div>
     </main>
 
-    <!-- JQuery download for the return to top button -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+{% endblock %}
 
+{% block postloadjs %}
+    {{ block.super }}
     <script>
         // Function to delay the appearance of the portfolio button
         window.onload = setTimeout(
