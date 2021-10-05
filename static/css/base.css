@@ -95,6 +95,20 @@ html, body {
     color: #e9c46a !important;
 }
 
+.link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 3px;
+    background: #f4a261;
+    transition: all .7s;
+}
+
+.link:hover::after {
+    width: 100%;
+    background: #2a9d8f;
+}
+
 /* Index page styles */
 
 main {
@@ -202,6 +216,9 @@ footer a:hover,
 footer .btn:focus,
 footer .btn:active {
     color: #e9c46a !important;
+}
+.link-wrap{
+    max-width: fit-content;
 }
 
 #footer-nav li a:hover,
@@ -729,4 +746,3 @@ footer .btn:active {
         top: 15%;
     }
 }
-

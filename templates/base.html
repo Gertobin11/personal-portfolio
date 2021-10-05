@@ -35,11 +35,13 @@
 <body>
     <header class="navbar navbar-expand-lg navbar-light bg-transparent">
         <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
-                aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon text-white"></span>
-            </button>
-            <a class="navbar-brand title-text text-white w-min-33" href="{% url 'home' %}"><span class="brt-grn"><i
+            <div class="w-50">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03"
+                    aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon text-white"></span>
+                </button>
+            </div>
+            <a class="navbar-brand title-text text-white w-min-33 link" href="{% url 'home' %}"><span class="brt-grn"><i
                         class="fas fa-laptop-code"></i></span>  Ger Tobin |<span
                                     class="paragraph-text"><em><small> Web
                 Developer</small></em></span></a>
@@ -47,16 +49,16 @@
                 <div class="me-auto ms-auto justify-content-md-center collapse navbar-collapse" id="navbarTogglerDemo03">
                     <ul id="nav-bar-links" class="navbar-nav mb-lg-0">
                         <li class="nav-item">
-                            <a class="text-white nav-link" aria-current="page" href="{% url 'home' %}">Home</a>
+                            <a class="text-white nav-link link" aria-current="page" href="{% url 'home' %}">Home</a>
+                        </li>
+                        <li class="nav-item d-block">
+                            <a class="text-white nav-link link" href="{% url 'about_me' %}">About Me</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-white nav-link" href="{% url 'about_me' %}">About Me</a>
+                            <a class="text-white nav-link link" href="{% url 'portfolio_page' %}">Portfolio</a>
                         </li>
                         <li class="nav-item">
-                            <a class="text-white nav-link" href="{% url 'portfolio_page' %}">Portfolio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="text-white nav-link" href="{% url 'contact' %}">Contact</a>
+                            <a class="text-white nav-link link" href="{% url 'contact' %}">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -64,14 +66,14 @@
             <div class="w-min-33 collapse navbar-collapse" id="navbarTogglerDemo03">
                 <ul class="navbar-nav mb-lg-0 ms-auto">
                     <li class="nav-item">
-                        <a class="text-white nav-link" aria-current="page" href="#"><i
+                        <a class="text-white nav-link link" aria-current="page" href="#"><i
                                 class="fab fa-linkedin-in"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link" href="#"><i class="fab fa-github"></i></a>
+                        <a class="text-white nav-link link" href="#"><i class="fab fa-github"></i></a>
                     </li>
                     <li class="nav-item">
-                        <a class="text-white nav-link" href="#"><i class="fas fa-envelope-square"></i></a>
+                        <a class="text-white nav-link link" href="#"><i class="fas fa-envelope-square"></i></a>
                     </li>
                 </ul>
             </div>
@@ -105,7 +107,7 @@
         <div class="pt-5 container">
             <div class="row">
                 <div class="col-12 col-md-4 pb-3">
-                    <ul class="text-center list-unstyled">
+                    <ul class="text-start list-unstyled">
                         <li class="whitesmoke">Ger Tobin</li>
                         <li class="whitesmoke">Web Developer</li>
                         <li class="small whitesmoke">gertobindev@gmail.com</li>
@@ -114,33 +116,51 @@
                 </div>
                 <div class="col-12 col-md-4 pb-3">
                     <div class="row">
-                        <div class="text-center col-4">
-                            <a class="whitesmoke" aria-current="page" href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <div class="d-flex justify-content-center col-4">
+                            <div class="link-wrap">
+                                <a class="link whitesmoke" aria-current="page" href="#"><i class="big-font fab fa-linkedin-in"></i></a>
+                            </div>
                         </div>
-                        <div class="text-center col-4">
-                            <a class="whitesmoke" href="#"><i class="fab fa-github"></i></a>
+                        <div class="d-flex justify-content-center col-4">
+                            <div class="link-wrap">
+                                <a class="link whitesmoke" href="#"><i class="big-font fab fa-github"></i></a>
+                            </div>
                         </div>
-                        <div class="text-center col-4">
-                            <a class="whitesmoke" href="#"><i class="fas fa-envelope-square"></i></a>
+                        <div class="d-flex justify-content-center col-4">
+                            <div class="link-wrap">
+                                <a class="link whitesmoke" href="#"><i class="big-font fas fa-envelope-square"></i></a>
+                            </div>
                         </div>
-                        <div class="mt-3 col-12 text-center">
-                            <p class="paragraph-text whitesmoke small">
-                                Download my CV  <a class="big-font hand-drawn brt-grn text-decoration-none" href="#"> HERE!</a>
-                            </p>
+                        <div class="mt-3 col-12 d-flex justify-content-center">
+                            <div class="link-wrap">
+                                <p class="d-inline paragraph-text whitesmoke small">
+                                    Download my CV <a class="big-font hand-drawn brt-grn text-decoration-none link" href="#">
+                                            HERE!</a>
+                                </p>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 pb-3">
                     <nav>
                         <ul id="footer-nav" class="text-center bg-transparent">
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small"
-                                    href="{% url 'home' %}">Home</a></li>
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small" 
-                                    href="{% url 'about_me' %}">About Me</a></li>
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small"
-                                    href="{% url 'portfolio_page' %}">Portfolio</a></li>
-                            <li class="no-list-dec"><a class="text-decoration-none whitesmoke small"
-                                    href="{% url 'contact' %}">Contact</a></li>
+                            <li class="d-flex justify-content-center no-list-dec">
+                                <div class="link-wrap"><a
+                                    class="link text-decoration-none whitesmoke small"
+                                    href="{% url 'home' %}">Home</a></div>
+                                    </li>
+                            <li class="d-flex justify-content-center no-list-dec">
+                                <div class="link-wrap"><a
+                                    class="link text-decoration-none whitesmoke small"
+                                    href="{% url 'about_me' %}">About Me</a></div></li>
+                            <li class="d-flex justify-content-center no-list-dec">
+                                <div class="link-wrap"><a
+                                    class="link text-decoration-none whitesmoke small"
+                                    href="{% url 'portfolio_page' %}">Portfolio</a></div></li>
+                            <li class="d-flex justify-content-center no-list-dec">
+                                <div class="link-wrap"><a
+                                    class="link text-decoration-none whitesmoke small"
+                                    href="{% url 'contact' %}">Contact</a></div></li>
                         </ul>
                     </nav>
                 </div>
