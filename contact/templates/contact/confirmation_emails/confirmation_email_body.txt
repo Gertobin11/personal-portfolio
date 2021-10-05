@@ -1,0 +1,7 @@
+Hey {{ form_data.fullname }}!
+Thanks for getting in contact with me.
+I appreciate that you have taken the time to check out my website and 
+I will get back to you as soon as possible at {{ form_data.email }}
+
+Kind Regards 
+Ger Tobin
