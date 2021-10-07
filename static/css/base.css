@@ -734,6 +734,23 @@ footer .btn:active {
     color: #f4a261 !important;
 }
 
+/* Contact page style */ 
+
+#home-btn:hover,
+#home-btn:active,
+#home-btn:focus {
+    color: #2a9d8f !important;
+    background-color: whitesmoke !important;
+}
+
+.bg-danger:hover,
+.bg-danger:active,
+.bg-danger:focus {
+    color: red !important;
+    background-color: black !important;
+}
+
+
 /* Media Queries */
 @media only screen and (max-width: 575px) {
     .navbar-brand {
