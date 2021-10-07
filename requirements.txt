@@ -4,6 +4,7 @@ botocore==1.21.56
 dj-database-url==0.5.0
 Django==3.2.7
 django-crispy-forms==1.13.0
+django-storages==1.12
 gunicorn==20.1.0
 jmespath==0.10.0
 Pillow==8.3.2
