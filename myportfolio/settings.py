@@ -44,7 +44,7 @@ INSTALLED_APPS = [
     'contact',
     'crispy_forms',
     'portfolio',
-    'storage'
+    'storages'
 ]
 
 MIDDLEWARE = [
