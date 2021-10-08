@@ -8,7 +8,7 @@
                 <div class="my-2 px-4 col-12 col-md-6">
                     <a href="{% url 'portfolio_details' pk=project.id %}" class="text-decoration-none">
                         <div class="shadow-6 card mb-3 bg-transparent">
-                            <img src="/media/{{ project.project_image }}" class="card-img-top" alt="...">
+                            <img src="{{ MEDIA_URL }}{{ project.project_image }}" class="card-img-top" alt="...">
                             <div class="card-body black-overlay">
                                 <h5 class="title-text whitesmoke card-title">{{ project.project_name }}</h5>
                                 <p class="card-text paragraph-text whitesmoke">{{ project.project_intro }}</p>

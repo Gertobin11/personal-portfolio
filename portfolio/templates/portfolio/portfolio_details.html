@@ -7,7 +7,7 @@
             <br>
             <div class="row">
                 <div class="px-0 col-12 img-header">
-                    <img src="/media/{{ project.project_image }}" alt="">
+                    <img src="{{ MEDIA_URL }}{{ project.project_image }}" alt="">
                     <div class="px-4 py-4 container-project whitesmoke paragraph-text black-overlay">
                         <h2 class="text-center title-text whitesmoke">{{ project.project_name }}</h2>
                         <div class="row">
