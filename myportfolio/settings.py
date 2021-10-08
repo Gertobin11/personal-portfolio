@@ -139,6 +139,8 @@ STATIC_URL = '/static/'
 
 STATICFILES_DIRS = (os.path.join('static'),)
 
+DATE_INPUT_FORMATS = ['%d-%m-%Y']
+
 
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 

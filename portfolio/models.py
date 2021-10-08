@@ -14,6 +14,7 @@ class Portfolio(models.Model):
     live_site = models.CharField(max_length=254)
     """ I had to use charfield instead of genericipaddress
         as my heroku apps were throwing errors """
+    project_date = models.CharField(max_length=25)
 
     def __str__(self):
         return self.project_name

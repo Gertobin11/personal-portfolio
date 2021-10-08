@@ -12,15 +12,20 @@
                             <div class="card-body black-overlay">
                                 <h5 class="title-text whitesmoke card-title">{{ project.project_name }}</h5>
                                 <p class="card-text paragraph-text whitesmoke">{{ project.project_intro }}</p>
-                                <p class="card-text"><small class="text-muted">{{ project.pk }}</small></p>
+                                <p class="card-text"><small class="text-muted">Created on: {{ project.project_date }}</small></p>
                             </div>
                         </div>
                     </a>
                 </div>
             {% endfor %}
         </div>
-        <br><br><br>
-        <br><br><br>
+        <br><br>
+        <div class="mx-2 my-4 text-center button-wrapper">
+            <a id="return-home" class="btn text-white" href="{% url 'portfolio_page' %}">
+                <i class="fas fa-chevron-left"></i> Home
+            </a>
+        </div>
+        <br><br>
     </div>
 {% endblock %}
 

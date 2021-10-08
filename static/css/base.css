@@ -734,6 +734,13 @@ footer .btn:active {
     color: #f4a261 !important;
 }
 
+#return-home:hover,
+#return-home:focus,
+#return-home:active {
+    background-color: black !important;
+    color: #f4a261 !important;
+}
+
 /* Contact page style */ 
 
 #home-btn:hover,
